@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": "001",
+      "name": "Nike Air Max 270",
+      "category": "Sneakers",
+      "brand": "Nike",
+      "price": 150.00,
+      "stock": 50,
+      "sizes": [38, 39, 40, 41, 42, 43],
+      "colors": ["Black", "White", "Blue"],
+      "description": "Lightweight and comfortable sneakers with a modern design.",
+      "sku": "NA270-BLK",
+      "date_added": "2024-11-23",
+      "supplier": "Nike Official Distributor",
+      "image": "images/001.jpg"
+    },
+    {
+      "id": "002",
+      "name": "Adidas Ultraboost 22",
+      "category": "Running Shoes",
+      "brand": "Adidas",
+      "price": 180.00,
+      "stock": 30,
+      "sizes": [40, 41, 42, 43, 44],
+      "colors": ["Gray", "Black", "Green"],
+      "description": "High-performance running shoes for ultimate comfort and support.",
+      "sku": "AU22-GRY",
+      "date_added": "2024-11-15",
+      "supplier": "Adidas Wholesale",
+      "image": "images/002.jpg"
+    },
+    {
+      "id": "003",
+      "name": "Puma RS-X",
+      "category": "Lifestyle Shoes",
+      "brand": "Puma",
+      "price": 120.00,
+      "stock": 70,
+      "sizes": [39, 40, 41, 42, 43],
+      "colors": ["White", "Red", "Yellow"],
+      "description": "Bold and stylish design perfect for casual wear.",
+      "sku": "PRSX-WHT",
+      "date_added": "2024-10-30",
+      "supplier": "Puma Direct",
+      "image": "images/003.jpg"
+    },
+    {
+      "id": "004",
+      "name": "Asics Gel-Kayano 29",
+      "category": "Running Shoes",
+      "brand": "Asics",
+      "price": 140.00,
+      "stock": 20,
+      "sizes": [40, 41, 42, 43, 44, 45],
+      "colors": ["Blue", "White", "Black"],
+      "description": "Premium stability running shoes with advanced cushioning.",
+      "sku": "AGK29-BLU",
+      "date_added": "2024-11-01",
+      "supplier": "Asics Regional Supplier",
+      "image": "images/004.jpg"
+    }
+  ]
+}
