@@ -1,0 +1,17 @@
+Cách 1: Dùng Python để chạy máy chủ web cục bộ
+Nếu bạn có Python cài đặt trên máy tính, bạn có thể dễ dàng tạo một máy chủ web để phục vụ các tệp của mình. Đây là các bước:
+
+Mở Command Prompt hoặc PowerShell.
+Bước 1:
+Điều hướng đến thư mục chứa view.html và products.json
+
+Bước 2:
+Nếu bạn đang sử dụng Python 3, hãy chạy lệnh sau để khởi động máy chủ web:
+python -m http.server 8000
+Điều này sẽ mở máy chủ tại địa chỉ http://localhost:8000/.
+
+Bước 3
+Mở trình duyệt web và truy cập vào:
+http://localhost:8000/view.html
+
+Giờ đây, trang web của bạn sẽ có thể thực hiện các yêu cầu fetch và truy xuất products.json mà không gặp vấn đề về bảo mật.
