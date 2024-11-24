@@ -39,7 +39,7 @@
     .product img {
       width: 150px;
       height: 150px;
-      object-fit: cover; /* Ensure image is square and cropped if necessary */
+      object-fit: cover;
       margin-right: 20px;
       border-radius: 5px;
     }
@@ -59,6 +59,9 @@
     }
     .stock {
       color: #dc3545;
+    }
+    .sold {
+      color: #007bff;
     }
     .color-selector {
       display: flex;
@@ -90,20 +93,26 @@
       <select id="filter-color">
         <option value="">All Colors</option>
       </select>
+      <select id="filter-sort">
+        <option value="price">Sort by Price</option>
+        <option value="date_added">Sort by Date Added</option>
+        <option value="sold">Sort by Sold</option>
+      </select>
     </div>
     <div id="product-list"></div>
   </div>
 
   <script>
     // Fetch JSON data
-    fetch('products.json?' + new Date().getTime())  // Thêm thời gian hiện tại vào URL để tránh cache
-     .then(response => response.json())
-     .then(data => {
+    fetch('products.json?' + new Date().getTime())  // Add timestamp to avoid cache
+      .then(response => response.json())
+      .then(data => {
         const products = data.products; // Access the 'products' array
         const productList = document.getElementById('product-list');
         const filterCategory = document.getElementById('filter-category');
         const filterSize = document.getElementById('filter-size');
         const filterColor = document.getElementById('filter-color');
+        const filterSort = document.getElementById('filter-sort');
 
         // Populate filter options
         const categories = [...new Set(products.map(product => product.category))];
@@ -131,10 +140,26 @@
           filterColor.appendChild(option);
         });
 
+        // Sort function for sorting products
+        const sortProducts = (filteredProducts) => {
+          const sortBy = filterSort.value;
+
+          return filteredProducts.sort((a, b) => {
+            if (sortBy === 'price') {
+              return a.price - b.price;
+            } else if (sortBy === 'date_added') {
+              return new Date(b.date_added) - new Date(a.date_added);
+            } else if (sortBy === 'sold') {
+              return b.sold - a.sold;
+            }
+            return 0;
+          });
+        };
+
         // Render products
         const renderProducts = (filteredProducts) => {
           productList.innerHTML = '';
-          filteredProducts.forEach(product => {
+          sortProducts(filteredProducts).forEach(product => {
             const productDiv = document.createElement('div');
             productDiv.className = 'product';
 
@@ -151,6 +176,7 @@
                 <p><strong>Sizes:</strong> ${product.sizes.join(', ')}</p>
                 <p><strong>Colors:</strong> ${Object.keys(product.colors).join(', ')}</p>
                 <p><strong>Stock:</strong> <span class="stock">${product.stock}</span></p>
+                <p><strong>Sold:</strong> <span class="sold">${product.sold}</span></p>
                 <p>${product.description}</p>
                 <div class="color-selector" id="color-selector-${product.id}"></div>
               </div>
@@ -194,6 +220,7 @@
         filterCategory.addEventListener('change', applyFilters);
         filterSize.addEventListener('change', applyFilters);
         filterColor.addEventListener('change', applyFilters);
+        filterSort.addEventListener('change', applyFilters);
       })
       .catch(error => console.error('Error fetching products:', error));
   </script>
