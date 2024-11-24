@@ -8,12 +8,17 @@
       "price": 150.00,
       "stock": 50,
       "sizes": [38, 39, 40, 41, 42, 43],
-      "colors": ["Black", "White", "Blue"],
+      "main_image": "images/001_sample.jpg",
+      "colors": {
+        "Black": "images/001_black.jpg",
+        "White": "images/001_white.jpg",
+        "Blue": "images/001_blue.jpg",
+        "Red": "images/001_red.jpg"
+      },
       "description": "Lightweight and comfortable sneakers with a modern design.",
       "sku": "NA270-BLK",
       "date_added": "2024-11-23",
-      "supplier": "Nike Official Distributor",
-      "image": "images/001.jpg"
+      "supplier": "Nike Official Distributor"
     },
     {
       "id": "002",
@@ -23,42 +28,130 @@
       "price": 180.00,
       "stock": 30,
       "sizes": [40, 41, 42, 43, 44],
-      "colors": ["Gray", "Black", "Green"],
+      "main_image": "images/002_sample.jpg",
+      "colors": {
+        "Gray": "images/002_gray.jpg",
+        "Black": "images/002_black.jpg",
+        "Green": "images/002_green.jpg",
+        "Blue": "images/002_blue.jpg"
+      },
       "description": "High-performance running shoes for ultimate comfort and support.",
       "sku": "AU22-GRY",
       "date_added": "2024-11-15",
-      "supplier": "Adidas Wholesale",
-      "image": "images/002.jpg"
-    },
+      "supplier": "Adidas Wholesale"
+    }
     {
       "id": "003",
-      "name": "Puma RS-X",
-      "category": "Lifestyle Shoes",
+      "name": "Puma RS-X3 Puzzle",
+      "category": "Sneakers",
       "brand": "Puma",
       "price": 120.00,
-      "stock": 70,
-      "sizes": [39, 40, 41, 42, 43],
-      "colors": ["White", "Red", "Yellow"],
-      "description": "Bold and stylish design perfect for casual wear.",
-      "sku": "PRSX-WHT",
-      "date_added": "2024-10-30",
-      "supplier": "Puma Direct",
-      "image": "images/003.jpg"
+      "stock": 40,
+      "sizes": [38, 39, 40, 41, 42, 43],
+      "main_image": "images/003_sample.jpg",
+      "colors": {
+        "Black": "images/003_black.jpg",
+        "White": "images/003_white.jpg",
+        "Orange": "images/003_orange.jpg"
+      },
+      "description": "Retro-inspired sneakers with bold color combinations.",
+      "sku": "PRX3-BLK",
+      "date_added": "2024-11-22",
+      "supplier": "Puma Direct"
     },
     {
       "id": "004",
+      "name": "New Balance 574",
+      "category": "Casual Shoes",
+      "brand": "New Balance",
+      "price": 100.00,
+      "stock": 60,
+      "sizes": [37, 38, 39, 40, 41, 42],
+      "main_image": "images/004_sample.jpg",
+      "colors": {
+        "Gray": "images/004_gray.jpg",
+        "Navy": "images/004_navy.jpg",
+        "Beige": "images/004_beige.jpg"
+      },
+      "description": "Classic casual shoes with timeless appeal.",
+      "sku": "NB574-GRY",
+      "date_added": "2024-11-20",
+      "supplier": "New Balance Supplier"
+    },
+    {
+      "id": "005",
       "name": "Asics Gel-Kayano 29",
       "category": "Running Shoes",
       "brand": "Asics",
-      "price": 140.00,
-      "stock": 20,
-      "sizes": [40, 41, 42, 43, 44, 45],
-      "colors": ["Blue", "White", "Black"],
-      "description": "Premium stability running shoes with advanced cushioning.",
+      "price": 160.00,
+      "stock": 25,
+      "sizes": [40, 41, 42, 43, 44],
+      "main_image": "images/005_sample.jpg",
+      "colors": {
+        "Blue": "images/005_blue.jpg",
+        "Black": "images/005_black.jpg",
+        "Yellow": "images/005_yellow.jpg"
+      },
+      "description": "Premium running shoes with enhanced cushioning.",
       "sku": "AGK29-BLU",
-      "date_added": "2024-11-01",
-      "supplier": "Asics Regional Supplier",
-      "image": "images/004.jpg"
+      "date_added": "2024-11-18",
+      "supplier": "Asics Retail Partner"
+    },
+    {
+      "id": "006",
+      "name": "Reebok Classic Leather",
+      "category": "Casual Shoes",
+      "brand": "Reebok",
+      "price": 90.00,
+      "stock": 80,
+      "sizes": [36, 37, 38, 39, 40, 41],
+      "main_image": "images/006_sample.jpg",
+      "colors": {
+        "White": "images/006_white.jpg",
+        "Black": "images/006_black.jpg"
+      },
+      "description": "Classic leather shoes with a sleek and simple design.",
+      "sku": "RCL-WHT",
+      "date_added": "2024-11-10",
+      "supplier": "Reebok Distributor"
+    },
+    {
+      "id": "007",
+      "name": "Converse Chuck Taylor All Star",
+      "category": "Casual Shoes",
+      "brand": "Converse",
+      "price": 70.00,
+      "stock": 100,
+      "sizes": [35, 36, 37, 38, 39, 40],
+      "main_image": "images/007_sample.jpg",
+      "colors": {
+        "Red": "images/007_red.jpg",
+        "White": "images/007_white.jpg",
+        "Black": "images/007_black.jpg"
+      },
+      "description": "Iconic high-top sneakers for all-day style.",
+      "sku": "CCTAS-RED",
+      "date_added": "2024-11-05",
+      "supplier": "Converse Wholesale"
+    },
+    {
+      "id": "008",
+      "name": "Vans Old Skool",
+      "category": "Skate Shoes",
+      "brand": "Vans",
+      "price": 75.00,
+      "stock": 70,
+      "sizes": [38, 39, 40, 41, 42],
+      "main_image": "images/008_sample.jpg",
+      "colors": {
+        "Black": "images/008_black.jpg",
+        "White": "images/008_white.jpg",
+        "Red": "images/008_red.jpg"
+      },
+      "description": "Timeless skate shoes with a signature side stripe.",
+      "sku": "VOS-BLK",
+      "date_added": "2024-11-15",
+      "supplier": "Vans Authorized Dealer"
     }
   ]
 }
