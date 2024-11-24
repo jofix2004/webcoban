@@ -7,6 +7,7 @@
       "brand": "Nike",
       "price": 150.00,
       "stock": 50,
+      "sold": 20,
       "sizes": [38, 39, 40, 41, 42, 43],
       "main_image": "images/001_sample.jpg",
       "colors": {
@@ -27,6 +28,7 @@
       "brand": "Adidas",
       "price": 180.00,
       "stock": 30,
+      "sold": 15,
       "sizes": [40, 41, 42, 43, 44],
       "main_image": "images/002_sample.jpg",
       "colors": {
@@ -47,6 +49,7 @@
       "brand": "Puma",
       "price": 120.00,
       "stock": 40,
+      "sold": 25,
       "sizes": [38, 39, 40, 41, 42, 43],
       "main_image": "images/003_sample.jpg",
       "colors": {
@@ -66,6 +69,7 @@
       "brand": "New Balance",
       "price": 100.00,
       "stock": 60,
+      "sold": 30,
       "sizes": [37, 38, 39, 40, 41, 42],
       "main_image": "images/004_sample.jpg",
       "colors": {
@@ -85,6 +89,7 @@
       "brand": "Asics",
       "price": 160.00,
       "stock": 25,
+      "sold": 10,
       "sizes": [40, 41, 42, 43, 44],
       "main_image": "images/005_sample.jpg",
       "colors": {
@@ -104,6 +109,7 @@
       "brand": "Reebok",
       "price": 90.00,
       "stock": 80,
+      "sold": 40,
       "sizes": [36, 37, 38, 39, 40, 41],
       "main_image": "images/006_sample.jpg",
       "colors": {
@@ -122,6 +128,7 @@
       "brand": "Converse",
       "price": 70.00,
       "stock": 100,
+      "sold": 50,
       "sizes": [35, 36, 37, 38, 39, 40],
       "main_image": "images/007_sample.jpg",
       "colors": {
@@ -141,6 +148,7 @@
       "brand": "Vans",
       "price": 75.00,
       "stock": 70,
+      "sold": 35,
       "sizes": [38, 39, 40, 41, 42],
       "main_image": "images/008_sample.jpg",
       "colors": {
