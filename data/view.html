@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product List</title>
+  <title>Product List with Color Selector</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -37,7 +37,9 @@
       border-bottom: none;
     }
     .product img {
-      max-width: 150px;
+      width: 150px;
+      height: 150px;
+      object-fit: cover; /* Ensure image is square and cropped if necessary */
       margin-right: 20px;
       border-radius: 5px;
     }
@@ -57,6 +59,21 @@
     }
     .stock {
       color: #dc3545;
+    }
+    .color-selector {
+      display: flex;
+      gap: 5px;
+      margin: 10px 0;
+    }
+    .color-button {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .color-button:hover {
+      opacity: 0.8;
     }
   </style>
 </head>
@@ -79,9 +96,9 @@
 
   <script>
     // Fetch JSON data
-    fetch('products.json')
-      .then(response => response.json())
-      .then(data => {
+    fetch('products.json?' + new Date().getTime())  // Thêm thời gian hiện tại vào URL để tránh cache
+     .then(response => response.json())
+     .then(data => {
         const products = data.products; // Access the 'products' array
         const productList = document.getElementById('product-list');
         const filterCategory = document.getElementById('filter-category');
@@ -91,7 +108,7 @@
         // Populate filter options
         const categories = [...new Set(products.map(product => product.category))];
         const sizes = [...new Set(products.flatMap(product => product.sizes))];
-        const colors = [...new Set(products.flatMap(product => product.colors))];
+        const colors = [...new Set(products.flatMap(product => Object.keys(product.colors)))];
 
         categories.forEach(category => {
           const option = document.createElement('option');
@@ -121,19 +138,36 @@
             const productDiv = document.createElement('div');
             productDiv.className = 'product';
 
+            // Default image
+            let currentImage = product.main_image;
+
             productDiv.innerHTML = `
-              <img src="${product.image}" alt="${product.name}">
+              <img src="${currentImage}" alt="${product.name}" id="product-image-${product.id}">
               <div class="product-details">
                 <h2>${product.name}</h2>
                 <p><strong>Category:</strong> ${product.category}</p>
                 <p><strong>Brand:</strong> ${product.brand}</p>
                 <p class="price">$${product.price.toFixed(2)}</p>
                 <p><strong>Sizes:</strong> ${product.sizes.join(', ')}</p>
-                <p><strong>Colors:</strong> ${product.colors.join(', ')}</p>
+                <p><strong>Colors:</strong> ${Object.keys(product.colors).join(', ')}</p>
                 <p><strong>Stock:</strong> <span class="stock">${product.stock}</span></p>
                 <p>${product.description}</p>
+                <div class="color-selector" id="color-selector-${product.id}"></div>
               </div>
             `;
+
+            // Add color buttons
+            const colorSelector = productDiv.querySelector(`#color-selector-${product.id}`);
+            Object.keys(product.colors).forEach(color => {
+              const colorButton = document.createElement('div');
+              colorButton.className = 'color-button';
+              colorButton.style.backgroundColor = color;
+              colorButton.addEventListener('click', () => {
+                const productImage = document.getElementById(`product-image-${product.id}`);
+                productImage.src = product.colors[color] || product.main_image; // Fallback to main image
+              });
+              colorSelector.appendChild(colorButton);
+            });
 
             productList.appendChild(productDiv);
           });
@@ -150,7 +184,7 @@
           const filteredProducts = products.filter(product => {
             const matchesCategory = !category || product.category === category;
             const matchesSize = !size || product.sizes.includes(parseInt(size));
-            const matchesColor = !color || product.colors.includes(color);
+            const matchesColor = !color || Object.keys(product.colors).includes(color);
             return matchesCategory && matchesSize && matchesColor;
           });
 
