@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết Sản Phẩm</title>
+  <style>
+    @font-face {
+      font-family: "FzPoppins";
+      src: url("FzPoppins/FzPoppins/FZ\ Poppins-Regular.ttf") format("truetype");
+      font-weight: 400; /* Regular */
+      font-style: normal;
+  }
+  
+  @font-face {
+      font-family: "Vollkorn";
+      src: url("Vollkorn/static/Vollkorn-Medium.ttf") format("truetype");
+      font-weight: 500; /* Medium */
+      font-style: normal;
+  }
+  
+  @font-face {
+      font-family: "Vollkorn";
+      src: url("Vollkorn/static/Vollkorn-Regular.ttf") format("truetype");
+      font-weight: 400; /* Regular */
+      font-style: normal;
+  }
+  
+  @font-face {
+      font-family: "Volkhov";
+      src: url("Volkhov/Volkhov-Regular.ttf") format("truetype");
+      font-weight: 400; /* Regular */
+      font-style: normal;
+  }
+  
+  @font-face {
+      font-family: "Poppins";
+      src: url("Poppins/Poppins-Regular.ttf") format("truetype");
+      font-weight: 400; /* Regular */
+      font-style: normal;
+  }
+  
+  @font-face {
+      font-family: "Poppins";
+      src: url("Poppins/Poppins-Medium.ttf") format("truetype");
+      font-weight: 500; /* Medium */
+      font-style: normal;
+  }
+    header {
+      max-width: 1280px;
+      margin: 0px auto;
+      padding: 10px;
+      background: white;
+      border-radius: 8px;
+
+      display: flex; /* Sử dụng flexbox để tạo layout */
+      height: 100%;
+  }
+  
+  .logo {
+      font-family: Volkhov, serif;
+      font-size: 52px;
+      color: #484848;
+      margin-left: auto;
+  }
+  
+  nav {
+      flex-grow: 1; /* Để nav chiếm không gian còn lại */
+      text-align: center; /* Căn giữa nav */
+      margin-left: 150px;
+      justify-content: center;
+      padding: 20px;
+      display: flex;
+  }
+  .right-section {
+    display: flex; /* Sử dụng flexbox cho div chứa search và tool */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+  
+  .nav-btn {
+      color: #484848;
+      font-family: Poppins, sans-serif;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 0 30px;
+      position: relative;
+  }
+  
+.nav-btn::after {
+  content: ""; /* Tạo nội dung rỗng cho pseudo-element */
+  display: block; /* Đặt thành block để có thể điều chỉnh chiều rộng */
+  width: 0; /* Chiều rộng ban đầu là 0 */
+  height: 2px; /* Độ dày của viền */
+  background: black; /* Màu viền */
+  transition: width 0.3s; /* Hiệu ứng chuyển tiếp khi hover */
+  margin: auto; /* Căn giữa viền */
+}
+
+.nav-btn:hover::after {
+  width: 100%; /* Đặt chiều rộng thành 100% khi hover */
+}
+  
+  .search {
+      display: flex;
+      align-items: center;
+      border: 1px solid #8A8A8A;
+      margin-right: 20px; /* Khoảng cách giữa search và tool */
+      background-color: #fff;
+  }
+  
+  .search-icon {
+      width: 18px;
+      height: 18px;
+      margin-left: 8px;
+  } 
+  .tool {
+      display: flex;
+      gap: 25px;
+  }
+  
+  .tool-btn {
+      display: flex;
+      align-items: center;
+  }
+  
+  .tool-icon {
+      width: 24px;
+      height: 24px;
+  }
+  
+  .newsletter {
+      display: flex;
+      justify-content: space-between;
+      max-height: 1280px;
+      margin; 0 auto;
+  }
+  
+  .image-1, .image-2 {
+      width: 33.3%;
+      height: auto;
+      object-fit: cover;
+  }
+  
+  .subscribe {
+      width: 33.3%;
+      text-align: center;
+      padding-top: 80px;
+  }
+  
+  .subscribe h1 {
+      font-family: Vollkorn, serif;
+      color: #484848;
+      font-size: 40px;
+      margin-bottom: 0;
+  }
+  .subscribe p {
+    font-family:FzPoppins,serif ;
+    color: #8A8A8A;
+    font-size: 15px;
+}
+.email-bar {
+    color: #8A8A8A;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #8A8A8A;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    outline: none;
+    height: 40px;
+}
+
+.subscribe-btn {
+    background-color: #000;
+    color: #FFF;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    height: 40px ;
+    box-shadow: 0px 20px 35px 0px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f9;
+    background: white;
+    margin: 0px auto;
+}
+
+.logo-ft {
+    font-family: Volkhov, serif;
+    font-size: 32px;
+    color: #484848;
+}
+
+.nav-ft {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.copyright {
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    color: #484848;
+    margin-top: 20px;
+    text-align: center;
+    clear: both;
+    width: 100%;
+}
+    .container{
+      max-width: 1280px;
+      margin: 20px auto;
+      background: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .product {
+      max-width: 1280px;
+      background: none;
+      display: flex; /* Sử dụng flexbox để tạo layout */
+      height: 100%;
+      width: 100%;
+    }
+    .product-image {
+      text-align: center;
+      width: 490px; /* Chiều rộng của khối vuông */
+      height: 490px; /* Chiều cao của khối vuông, bằng chiều rộng để tạo hình vuông */
+      overflow: hidden; /* Ẩn phần thừa của hình ảnh */
+      border: 1px solid #ddd; /* Thêm đường viền nếu cần */
+    }
+    .product-images {
+      display: flex; /* Sử dụng flexbox để sắp xếp ảnh */
+      width: 50%;
+    }
+    .color-thumbnails {
+      display: flex;
+      flex-direction: column; /* Đặt các ảnh màu sắc theo chiều dọc */
+      margin-right: 10px;
+    }
+    
+    .color-thumbnail {
+      width: 60px; /* Chiều rộng của ảnh màu sắc */
+      height: 60px; /* Chiều cao của ảnh màu sắc */
+      margin-bottom: 10px; /* Khoảng cách giữa các ảnh màu sắc */
+      cursor: pointer; /* Hiển thị con trỏ khi di chuột */
+      border: 1px solid #ddd; /* Thêm đường viền nếu cần */
+    }
+    
+    .product-image img {
+      width: 100%; /* Đặt chiều rộng hình ảnh là 100% của phần tử chứa */
+      height: 100%; /* Đặt chiều cao hình ảnh là 100% của phần tử chứa */
+      object-fit: cover; /* Đặt hình ảnh phủ kín phần tử chứa */
+    }
+    .product-details {
+      margin-left: 25px;
+      width: 100%;
+    }
+    .product-details h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .price {
+      color: #28a745;
+      font-size: 1.8em;
+      margin: 40px 0;
+    }
+    .color-selector, .size-selector {
+      margin: 10px 0;
+    }
+    .color-button {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    .size-button {
+      padding: 5px 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    .add-to-cart {
+      display: flex; /* Sử dụng flexbox để căn giữa chữ */
+      padding: 10px 20px;
+      background-color: none;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      border: 1px solid #000;
+      flex-grow: 1; /* Cho phép nút mở rộng để chiếm toàn bộ không gian còn lại */
+      align-items: center; /* Căn giữa chữ theo chiều dọc */
+      justify-content: center; /* Căn giữa chữ theo chiều ngang */
+    }
+    .color-button {
+      width: 30px; /* Chiều rộng của hình tròn màu sắc */
+      height: 30px; /* Chiều cao của hình tròn màu sắc */
+      border: 1px solid #ddd; /* Đường viền cho hình tròn */
+      border-radius: 50%; /* Bo góc để tạo hình tròn */
+      display: inline-block; /* Hiển thị hình tròn trên cùng một dòng */
+      margin-right: 5px; /* Khoảng cách giữa các hình tròn */
+      cursor: pointer; /* Hiển thị con trỏ khi di chuột */
+    }
+    .quantity-selector {
+      display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử */
+      align-items: center; /* Căn giữa các phần tử */
+      border: 1px solid #EEE;
+      width: fit-content;
+      border-radius: 4px;
+      margin-right: 20px; /* Khoảng cách giữa ô nhập và nút thêm vào giỏ hàng */
+    }
+    
+    .quantity-selector button {
+      border: none; /* Bỏ đường viền */
+      cursor: pointer; /* Hiển thị con trỏ khi di chuột */
+      width: 35px;
+      height: 38px;
+      background: none;
+      color: black; /* Màu chữ */
+      font-size: 15px;
+    }
+
+    .quantity-selector input {
+      text-align: center; /* Căn giữa chữ trong ô nhập */
+      max-width: 30px; /* Đặt chiều rộng cho ô nhập */
+      font-size: 1em; /* Kích thước chữ */
+      border: none;
+      outline: none;
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.quantity-and-cart {
+  display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin-top: 20px; /* Khoảng cách trên */
+  width: 100%;
+}
+#logo{
+  margin: 0;
+}
+.product-info {
+  margin-top: 80px; /* Thêm khoảng cách phía trên */
+  padding: 15px; /* Thêm padding cho vùng chứa */
+  border-radius: 8px; /* Bo góc cho vùng chứa */
+}
+
+.product-info h2 {
+  margin: 0 0 30px 0; /* Giảm khoảng cách cho tiêu đề */
+}
+
+table {
+  width: 100%; /* Chiều rộng 100% cho bảng */
+  border-collapse: collapse; /* Hợp nhất các đường viền */
+}
+
+th, td {
+  padding: 20px; /* Thêm padding cho các ô */
+  text-align: center; /* Căn trái cho nội dung */
+  border: 1px solid #ddd; /* Đường viền dưới cho các ô */
+}
+th{
+  width: 50%;
+}
+ul{
+  padding-left: 15px;
+  margin: 0px;
+}
+.size-chart-info {
+  padding: 15px;
+  background:none;
+  text-align: center; /* Căn giữa nội dung */
+}
+
+.size-image-info img {
+  width: 80%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của phần tử chứa */
+  height: auto; /* Giữ tỷ lệ hình ảnh */
+}
+.stock-message{
+  margin-top: 0;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SHOO</div>
+    <nav>
+        <a href="#" class="nav-btn">Home</a>
+        <a href="#" class="nav-btn">Shop</a>
+        <a href="#" class="nav-btn">Products</a>
+    </nav>
+    <div class="right-section"> <!-- Div chứa search và tool -->
+        <div class="search">
+          <img src="New folder/search.svg" alt="search icon" class="search-icon">
+          <input type="text" placeholder="Tìm kiếm" class="search-bar1" style="outline: none; border: none; width:120px; padding: 7px; font-size: 13px">
+        </div>
+        <div class="tool">
+            <a href="#" class="tool-btn">
+                <img src="New folder/user.svg" alt="user icon" class="tool-icon">
+            </a>
+            <a href="#" class="tool-btn">
+                <img src="New folder/star.svg" alt="favorites icon" class="tool-icon">
+            </a>
+            <a href="#" class="tool-btn">
+                <img src="New folder/cart.svg" alt="cart icon" class="tool-icon">
+            </a>
+        </div>
+    </div>
+</header>
+
+  <div class="container">
+    <div class="product" id="product-detail-container">
+      <div class="product-images">
+        <div class="color-thumbnails">
+          <!-- Các ảnh màu sắc sẽ được render ở đây -->
+        </div>
+        <div class="product-image">
+          <img src="" alt="Product Image">
+        </div>
+      </div>
+      <div class="product-details">
+        <p id="logo">SHOO</p>
+        <h1 style="margin: 10px 0;"></h1>
+        <p class="stock-message"></p>
+        <p class="price"></p>
+        <div class="size-selector">
+          <h4>Kích cỡ:</h4>
+          <!-- Kích cỡ sẽ được render ở đây -->
+        </div>
+        <div class="color-selector">
+          <h4>Màu sắc:</h4>
+          <div class="color-buttons">
+            <!-- Các hình tròn màu sắc sẽ được render ở đây -->
+          </div>
+        </div>
+        <div class="quantity">
+          <h4>Số lượng:</h4>
+          <div class="quantity-and-cart">
+            <div class="quantity-selector">
+              <button id="decrease-quantity">-</button>
+              <input type="number" id="quantity" value="1" min="1" style="width: 50px; text-align: center;">
+              <button id="increase-quantity">+</button>
+            </div>
+            <a href="#" class="add-to-cart">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-info">
+      <h2>Thông tin sản phẩm</h2>
+      <table>
+        <tr>
+          <th>Tên sản phẩm</th>
+          <td id="product-name"></td>
+        </tr>
+        <tr>
+          <th>Thương hiệu</th>
+          <td id="product-brand"></td>
+        </tr>
+        <tr>
+          <th>Xuất xứ</th>
+          <td id="product-origin"></td>
+        </tr>
+        <tr>
+          <th>Chất liệu</th>
+          <td id="product-material"></td>
+        </tr>
+        <tr>
+          <th>Hướng dẫn bảo quản</th>
+          <td id="product-care">
+            <ul>
+              <li>Tránh mang sản phẩm khi trời mưa hoặc thời tiết xấu để chúng không bị ướt dẫn đến bong tróc.</li>
+              <li>Cất giữ sản phẩm ở nơi thoáng mát để giữ gìn chất lượng của sản phẩm ở mức tốt nhất.</li>
+              <li>Lau chùi sản phẩm thường xuyên để tránh bụi.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Chế độ bảo hành</th>
+          <td id="product-warranty">Bảo hành chính hãng 1 tháng theo hóa đơn kiêm bảo hành</td>
+        </tr>
+      </table>
+      <h2 style="margin-top: 30px;">Bảng kích thước</h2>
+      <div class="size-chart-info">
+        <img id="size-chart" src="" alt="Size chart"> 
+    </div>
+  </div>
+  <div class="newsletter">
+    <img src="New folder/7xpndigk 2.png" alt="newsletter image 1" class="image-1">
+    <div class="subscribe">
+      <h1>Đăng ký nhận bản tin</h1>
+      <p>Để nhận các thông tin mới từ SHOO cùng như các chương trình khuyến mãi hấp dẫn</p>
+      <input type="email" placeholder="shoo@email.com" class="email-bar">
+      <button type="submit" class="subscribe-btn">Đăng ký ngay</button>
+  </div>
+    <img src="New folder/2qt47two 2.png" alt="newsletter image 2" class="image-2">
+</div>
+
+<footer>
+    <hr>
+    <div class="logo-ft">SHOO</div>
+    <nav class="nav-ft">
+        <a href="#" class="nav-btn">Home</a>
+        <a href="#" class="nav-btn">Shop</a>
+        <a href="#" class="nav-btn">Products</a>
+    </nav>
+    <div class="copyright">Copyright © 2024 SHOO. All Rights Reserved.</div>
+</footer>
+
+  <script>
+    // Giả sử bạn có ID sản phẩm trong URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id'); // Lấy ID sản phẩm từ URL
+
+// Fetch JSON data
+fetch('products.json') 
+.then(response => response.json())
+.then(data => {
+  const productId = new URLSearchParams(window.location.search).get('id'); // Lấy ID sản phẩm từ URL
+  const product = data.products.find(p => p.id == productId); // Tìm sản phẩm theo ID
+
+  if (product) {
+    const container = document.getElementById('product-detail-container');
+    const colorThumbnails = document.querySelector('.color-thumbnails');
+    const colorButtonsContainer = document.querySelector('.color-buttons');
+      // Render các ảnh trong additional_images
+product.additional_images.forEach(image => {
+  const thumbnail = document.createElement('img');
+  thumbnail.src = image; // Đường dẫn đến ảnh trong additional_images
+  thumbnail.alt = 'Additional Image';
+  thumbnail.className = 'color-thumbnail';
+  thumbnail.addEventListener('click', () => {
+    const mainImage = document.querySelector('.product-image img');
+    mainImage.src = image; // Đổi ảnh chính khi click
+  });
+  colorThumbnails.appendChild(thumbnail);
+});
+      // Render các hình tròn màu sắc
+      Object.keys(product.colors).forEach(color => {
+        const colorButton = document.createElement('div');
+        colorButton.className = 'color-button';
+        colorButton.style.backgroundColor = color; // Đặt màu nền cho hình tròn
+        colorButton.addEventListener('click', () => {
+          const mainImage = document.querySelector('.product-image img');
+          mainImage.src = product.colors[color]; // Đổi ảnh chính khi click
+        });
+        colorButtonsContainer.appendChild(colorButton);
+      });
+    // Cập nhật thông tin sản phẩm
+    container.querySelector('.product-image img').src = product.main_image;
+    container.querySelector('.product-details h1').textContent = product.name;
+    container.querySelector('.price').textContent = `$${product.price.toFixed(2)}`;
+    if (product.stock > 0) {
+      container.querySelector('.stock-message').textContent = `Chỉ còn ${product.stock} sản phẩm trong kho!`;
+  } else {
+      container.querySelector('.stock-message').textContent = 'Hết hàng'; // Hiển thị thông báo hết hàng
+  }
+    // Cập nhật thông tin vào bảng
+document.getElementById('product-name').textContent = product.name;
+document.getElementById('product-brand').textContent = product.brand;
+document.getElementById('product-origin').textContent = product.origin;
+document.getElementById('product-material').textContent = product.material;
+// Cập nhật hình ảnh kích thước
+document.getElementById('size-chart').src = product.size_image; // Cập nhật đường dẫn hình ảnh kích thước
+    // Render kích cỡ
+    const sizeSelector = container.querySelector('.size-selector');
+    sizeSelector.innerHTML += product.sizes.map(size => `<span class="size-button">${size}</span>`).join('');
+
+    //render thanh tăng giảm số lượng
+    document.getElementById('increase-quantity').addEventListener('click', () => {
+      const quantityInput = document.getElementById('quantity');
+      quantityInput.value = parseInt(quantityInput.value) + 1; // Tăng số lượng
+    });
+    
+    document.getElementById('decrease-quantity').addEventListener('click', () => {
+      const quantityInput = document.getElementById('quantity');
+      if (parseInt(quantityInput.value) > 1) {
+        quantityInput.value = parseInt(quantityInput.value) - 1; // Giảm số lượng
+      }
+    });
+  } else {
+    document.getElementById('product-detail-container').innerHTML = '<p>Không tìm thấy sản phẩm.</p>';
+  }
+})
+.catch(error => console.error('Error fetching product data:', error));
+  </script>
+</body>
+</html>

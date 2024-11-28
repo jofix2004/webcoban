@@ -16,10 +16,20 @@
         "Blue": "images/001_blue.jpg",
         "Red": "images/001_red.jpg"
       },
-      "description": "Lightweight and comfortable sneakers with a modern design.",
       "sku": "NA270-BLK",
       "date_added": "2024-11-23",
-      "supplier": "Nike Official Distributor"
+      "supplier": "Nike Official Distributor",
+      "origin": "Mỹ",
+      "material": ["Vải tổng hợp", " Cao su"],
+      "size_image": "images/001_size.png",
+      "additional_images": [
+        "images/001_additional_1.jpg",
+        "images/001_additional_2.jpg",
+        "images/001_additional_3.png",
+        "images/001_additional_4.png",
+        "images/001_additional_5.png",
+        "images/001_additional_6.jpg"
+    ]
     },
     {
       "id": "002",
@@ -37,10 +47,19 @@
         "Green": "images/002_green.jpg",
         "Blue": "images/002_blue.jpg"
       },
-      "description": "High-performance running shoes for ultimate comfort and support.",
       "sku": "AU22-GRY",
       "date_added": "2024-11-15",
-      "supplier": "Adidas Wholesale"
+      "supplier": "Adidas Wholesale",
+      "origin": "Đức",
+      "material": ["Vải dệt", " Cao su"],
+      "size_image": "images/002_size.png",
+      "additional_images": [
+        "images/002_additional_1.jpg",
+        "images/002_additional_2.jpg",
+        "images/002_additional_3.jpg",
+        "images/002_additional_4.jpg",
+        "images/002_additional_5.jpg"
+      ]
     },
     {
       "id": "003",
@@ -48,7 +67,7 @@
       "category": "Sneakers",
       "brand": "Puma",
       "price": 120.00,
-      "stock": 40,
+      "stock": 0,
       "sold": 25,
       "sizes": [38, 39, 40, 41, 42, 43],
       "main_image": "images/003_sample.jpg",
@@ -57,10 +76,20 @@
         "White": "images/003_white.jpg",
         "Orange": "images/003_orange.jpg"
       },
-      "description": "Retro-inspired sneakers with bold color combinations.",
       "sku": "PRX3-BLK",
       "date_added": "2024-11-22",
-      "supplier": "Puma Direct"
+      "supplier": "Puma Direct",
+      "origin": "Đức",
+      "material": ["Vải tổng hợp", " Cao su"],
+      "size_image": "images/003_size.png",
+      "additional_images": [
+        "images/003_additional_1.webp",
+        "images/003_additional_2.webp",
+        "images/003_additional_3.webp",
+        "images/003_additional_4.webp",
+        "images/003_additional_5.webp",
+        "images/003_additional_6.webp"
+      ]
     },
     {
       "id": "004",
@@ -77,10 +106,18 @@
         "Navy": "images/004_navy.jpg",
         "Beige": "images/004_beige.jpg"
       },
-      "description": "Classic casual shoes with timeless appeal.",
       "sku": "NB574-GRY",
       "date_added": "2024-11-20",
-      "supplier": "New Balance Supplier"
+      "supplier": "New Balance Supplier",
+      "origin": "Mỹ",
+      "material": ["Da", " Cao su"],
+      "size_image": "images/004_size.png",
+      "additional_images": [
+        "images/004_additional_1.webp",
+        "images/004_additional_2.webp",
+        "images/004_additional_3.webp",
+        "images/004_additional_4.webp"
+      ]
     },
     {
       "id": "005",
@@ -88,7 +125,7 @@
       "category": "Running Shoes",
       "brand": "Asics",
       "price": 160.00,
-      "stock": 25,
+      "stock": 20,
       "sold": 10,
       "sizes": [40, 41, 42, 43, 44],
       "main_image": "images/005_sample.jpg",
@@ -97,10 +134,13 @@
         "Black": "images/005_black.jpg",
         "Yellow": "images/005_yellow.jpg"
       },
-      "description": "Premium running shoes with enhanced cushioning.",
       "sku": "AGK29-BLU",
       "date_added": "2024-11-18",
-      "supplier": "Asics Retail Partner"
+      "supplier": "Asics Retail Partner",
+      "origin": "Nhật Bản",
+      "material": ["Sợi tổng hợp", " Cao su"],
+      "size_image": "images/005_size.png",
+      "additional_images": ["images/001_black.jpg", "images/001_white.jpg"]
     },
     {
       "id": "006",
@@ -116,10 +156,13 @@
         "White": "images/006_white.jpg",
         "Black": "images/006_black.jpg"
       },
-      "description": "Classic leather shoes with a sleek and simple design.",
       "sku": "RCL-WHT",
       "date_added": "2024-11-10",
-      "supplier": "Reebok Distributor"
+      "supplier": "Reebok Distributor",
+      "origin": "Mỹ",
+      "material": ["Da", " Cao su"],
+      "size_image": "images/006_size.jpg",
+      "additional_images": ["images/001_black.jpg", "images/001_white.jpg"]
     },
     {
       "id": "007",
@@ -136,10 +179,20 @@
         "White": "images/007_white.jpg",
         "Black": "images/007_black.jpg"
       },
-      "description": "Iconic high-top sneakers for all-day style.",
       "sku": "CCTAS-RED",
       "date_added": "2024-11-05",
-      "supplier": "Converse Wholesale"
+      "supplier": "Converse Wholesale",
+      "origin": "Mỹ",
+      "material": ["Vải canvas", " Cao su"],
+      "size_image": "images/007_size.png",
+      "additional_images": [
+        "images/007_additional_1.webp",
+        "images/007_additional_2.webp",
+        "images/007_additional_3.jpg",
+        "images/007_additional_4.webp",
+        "images/007_additional_5.webp",
+        "images/007_additional_6.webp"
+      ]
     },
     {
       "id": "008",
@@ -156,10 +209,19 @@
         "White": "images/008_white.jpg",
         "Red": "images/008_red.jpg"
       },
-      "description": "Timeless skate shoes with a signature side stripe.",
       "sku": "VOS-BLK",
       "date_added": "2024-11-15",
-      "supplier": "Vans Authorized Dealer"
+      "supplier": "Vans Authorized Dealer",
+      "origin": "Mỹ",
+      "material": ["Vải canvas", " Cao su"],
+      "size_image": "images/008_size.png",
+      "additional_images": [
+        "images/008_additional_1.webp",
+        "images/008_additional_2.webp",
+        "images/008_additional_3.webp",
+        "images/008_additional_4.webp",
+        "images/008_additional_5.webp"
+      ]
     }
   ]
 }
